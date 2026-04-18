@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\ship\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\ship\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\signal1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:signal1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\managers\\gamemanager\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\managers\\gamemanager\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,8 +11,16 @@
       "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\managers\\gamemanager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\signal1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:signal1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\label.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:label.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\ship\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\ship\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,50 +30,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "GameManager.cs",
               "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\GameManager.cs",
               "RelativeDocumentMoniker": "Scripts\\Managers\\GameManager\\GameManager.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\GameManager.cs",
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\GameManager.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAowBMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAcwDkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T10:52:56.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SpawnManager.cs",
               "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\SpawnManager.cs",
               "RelativeDocumentMoniker": "Scripts\\Managers\\GameManager\\SpawnManager.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\SpawnManager.cs",
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\SpawnManager.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowCcAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwEQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T19:02:26.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Label.cs",
               "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Label.cs",
               "RelativeDocumentMoniker": "Label.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Label.cs",
               "RelativeToolTip": "Label.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T17:56:35.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Signal1.cs",
               "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Signal1.cs",
               "RelativeDocumentMoniker": "Signal1.cs",
@@ -86,13 +86,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Ship.cs",
               "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Ship\\Ship.cs",
               "RelativeDocumentMoniker": "Scripts\\Ship\\Ship.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Ship\\Ship.cs",
               "RelativeToolTip": "Scripts\\Ship\\Ship.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T11:02:31.793Z",
               "EditorCaption": ""

@@ -1,37 +1,33 @@
 using Godot;
 using System;
+using static System.Net.Mime.MediaTypeNames;
 
 public partial class Ship : Node2D
 {
 	[Export] public float Speed = 1f;
 	[Export] public float RotationSpeed = 3f;
 	[Export] public float RotationSmooth = 5f;
+	private float input = 0;
 	private Node2D Player;
-	Vector2 Velocity;
+	Vector2 _velocity;
 	private float _targetRotation;
 	public override void _Ready()
 	{
+		AddToGroup("ship");
 		Player = GetTree().GetFirstNodeInGroup("player") as Node2D;
 	}
 	public override void _PhysicsProcess(double delta)
 	{
 		float dt = (float)delta;
-
-		HandleRotationInput(dt);
-		ApplySmoothRotation(dt);
+		ApplySmoothRotation(dt, input);
 		MoveForward(dt);
-		GD.Print(GetDistanceToPlayer());
-		GD.Print(Position);
-		Position += Velocity * dt;
+		
+		Position += _velocity * dt;
 	}
 
-	private void HandleRotationInput(float delta)
-	{
-		float input = 0;
-		_targetRotation += input * RotationSpeed * delta;
-	}
+	
 
-	private void ApplySmoothRotation(float delta)
+	private void ApplySmoothRotation(float delta, float input)
 	{
 		
 		Rotation = Mathf.LerpAngle(Rotation, _targetRotation, RotationSmooth * delta);
@@ -40,9 +36,9 @@ public partial class Ship : Node2D
 	private void MoveForward(float delta)
 	{
 
-		Position += new Vector2(1*Speed * delta,1*Speed * delta) ;
-
-
+		_velocity = Vector2.Up.Rotated(Rotation) * Speed;
+		
+		
 	}
 	private float GetDistanceToPlayer()
 	{
@@ -52,5 +48,10 @@ public partial class Ship : Node2D
 		return GlobalPosition.DistanceTo(Player.GlobalPosition);
 	}
 
+	private void updaterotation(float i)
+	{
 
+		_targetRotation += i;
+		GD.Print("2 " + _targetRotation);
+	}
 }

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ksnviv0sapfs"]
+
+[ext_resource type="Texture2D" uid="uid://dhn6aovdwa5u7" path="res://pf98j1djrbw41.jpg" id="1_kenku"]
+[ext_resource type="Script" uid="uid://c1rq3mqbtykjd" path="res://Scripts/Managers/Menu/MenuManager.cs" id="1_onc8m"]
+
+[node name="inGameUI" type="Control" unique_id=452059211]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_onc8m")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1812864717]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1880.0
+offset_bottom = -1040.0
+texture = ExtResource("1_kenku")
+
+[node name="Button" type="Button" parent="." unique_id=534793049]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 821.0
+offset_top = 450.0
+offset_right = -841.0
+offset_bottom = -404.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PLAY"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

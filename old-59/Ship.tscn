@@ -1,0 +1,23 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Ship/Ship.cs" id="1_xljvd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_umdaw"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8x2t"]
+size = Vector2(130, 127)
+
+[node name="Ship" type="CharacterBody2D" unique_id=725455035]
+position = Vector2(1660.8578, 540.8778)
+scale = Vector2(24.235, 25.052)
+velocity = Vector2(0.01, 0)
+script = ExtResource("1_xljvd")
+Speed = 0.01
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=904292401]
+texture = SubResource("CompressedTexture2D_umdaw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1909188487]
+position = Vector2(0.25, 0.75)
+shape = SubResource("RectangleShape2D_q8x2t")

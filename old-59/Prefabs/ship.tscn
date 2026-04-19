@@ -6,7 +6,7 @@
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7nyfi"]
-radius = 17.02
+radius = 81.23494
 
 [node name="Ship" type="Node2D" unique_id=1601136416]
 scale = Vector2(0.135, 0.14)
@@ -16,8 +16,10 @@ Speed = 10.0
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=904292401]
 texture = SubResource("CompressedTexture2D_umdaw")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=733747581]
+[node name="Ship" type="Area2D" parent="." unique_id=733747581]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1909188487]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship" unique_id=1909188487]
 position = Vector2(0.25, 0.75)
 shape = SubResource("CircleShape2D_7nyfi")
+
+[connection signal="area_entered" from="Ship" to="." method="_on_ship_area_entered"]

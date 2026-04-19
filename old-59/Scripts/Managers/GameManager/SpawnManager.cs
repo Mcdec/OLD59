@@ -20,7 +20,7 @@ public partial class SpawnManager : Node
 		set
 		{
 			input = value;
-
+			
 			GetTree().CallGroup("ship", "updaterotation", value);
 		}
 	}

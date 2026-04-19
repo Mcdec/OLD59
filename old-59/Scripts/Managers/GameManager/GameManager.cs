@@ -56,7 +56,7 @@ public partial class GameManager : Node
 		set
 		{
 			angle = value;
-
+			
 			GetTree().CallGroup("angle", "updateangle", value);
 		}
 	}
@@ -94,7 +94,7 @@ private void _on_timer_timeout(){
 
 	public static readonly Dictionary<string, float> Map = new()
 	{
-		{"111",-1f},{"112",-166.7f},{"113",-153.3f},
+		{"111",-1f},{"112",-180f},{"113",180f},
 		{"121",-140f},{"122",-126.7f},{"123",-113.3f},
 		{"131",-100f},{"132",-86.7f},{"133",-73.3f},
 
@@ -122,9 +122,10 @@ private void _on_timer_timeout(){
 			if (Exists(_command)) {
 				Map.TryGetValue(_command, out float angle);
 				Angle = angle;
-
+				
+				_command = null;
 			}
-			_command = null;
+			
 		}		 
 	}
 }

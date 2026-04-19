@@ -79,6 +79,7 @@ texture = ExtResource("6_0hv2o")
 
 [node name="BG thunder" type="AudioStreamPlayer" parent="SFX" unique_id=603789008]
 stream = ExtResource("7_xof7f")
+volume_db = -7.564
 autoplay = true
 
 [node name="AudioListener2D" type="AudioListener2D" parent="SFX" unique_id=804103531]

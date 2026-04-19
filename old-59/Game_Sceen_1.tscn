@@ -95,5 +95,3 @@ offset_top = -105.31805
 offset_right = 34.75
 offset_bottom = -82.31805
 script = ExtResource("2_c6k87")
-
-[node name="Area2D" type="Area2D" parent="Radar/Radar" unique_id=1663196437]

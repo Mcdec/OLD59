@@ -7,7 +7,6 @@ public partial class Signal1 : Button
 	
 	public override void _Ready()
 	{
-		
 		this.Pressed += ButtonPressed;
 	}
 	private void ButtonPressed()

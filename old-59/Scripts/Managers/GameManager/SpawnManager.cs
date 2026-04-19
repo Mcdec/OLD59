@@ -4,9 +4,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 public partial class SpawnManager : Node
 {
-	public float SpawnCost = 1000f;
+	public float SpawnCost = 20f;
 	private Node2D Player;
 	private float points;
+	Godot.Timer _timer = new Godot.Timer();
 	[Export]public PackedScene ShipPrefab;
 	float input = 0;
 	float angle = 0;
@@ -36,8 +37,8 @@ public partial class SpawnManager : Node
 		
 
 		
-		InputRotation += i;
-		GD.Print("1 "+InputRotation);
+		InputRotation = i;
+		
 	}
 	private void updatepoints(float i)
 	{
@@ -59,7 +60,7 @@ public partial class SpawnManager : Node
 {
 	
 	
-		int minRadius = 20;
+		int minRadius = 70;
 		int maxRadius = 100;
 		var rng = new RandomNumberGenerator();
 		rng.Randomize();
@@ -74,22 +75,14 @@ public partial class SpawnManager : Node
 {
 	var ship = ShipPrefab.Instantiate<Node2D>();
 	ship.GlobalPosition = GetSpawnPosition();
-	GD.Print(ship.Position);
+	
 	AddChild(ship);
 	
 	SetupShip(ship);
 }
 	private void SetupShip(Node2D ship)
 {
-	Vector2 toPlayer = Player.GlobalPosition - ship.GlobalPosition;
-
-	float baseAngle = toPlayer.Angle();
-	var rng = new RandomNumberGenerator();
-	rng.Randomize();
 	
-	float randomOffset = Mathf.DegToRad(rng.RandiRange(-20, 20));
 
-		InputRotation += randomOffset;
-		
 }
 }

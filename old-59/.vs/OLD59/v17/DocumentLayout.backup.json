@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\managers\\gamemanager\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\managers\\gamemanager\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\ship\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\ship\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\managers\\gamemanager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:label.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\ship\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\ship\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\managers\\gamemanager\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\managers\\gamemanager\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -40,20 +40,20 @@
               "RelativeDocumentMoniker": "Scripts\\Managers\\GameManager\\GameManager.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\GameManager.cs",
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\GameManager.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAcwDkAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T10:52:56.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "SpawnManager.cs",
               "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\SpawnManager.cs",
               "RelativeDocumentMoniker": "Scripts\\Managers\\GameManager\\SpawnManager.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\SpawnManager.cs",
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\SpawnManager.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAcwEQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T19:02:26.903Z",
               "EditorCaption": ""
@@ -66,7 +66,7 @@
               "RelativeDocumentMoniker": "Label.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Label.cs",
               "RelativeToolTip": "Label.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T17:56:35.892Z",
               "EditorCaption": ""
@@ -79,20 +79,20 @@
               "RelativeDocumentMoniker": "Signal1.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Signal1.cs",
               "RelativeToolTip": "Signal1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T16:27:42.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Ship.cs",
               "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Ship\\Ship.cs",
               "RelativeDocumentMoniker": "Scripts\\Ship\\Ship.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Ship\\Ship.cs",
               "RelativeToolTip": "Scripts\\Ship\\Ship.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T11:02:31.793Z",
               "EditorCaption": ""

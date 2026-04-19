@@ -19,7 +19,7 @@ public partial class GameManager : Node
 	private string _command = null;
 	private float angle = 0f;
 
-	private float points = 990;
+	private float points = 15;
 	public float Points
 	{
 		get
@@ -79,7 +79,7 @@ private void _on_timer_timeout(){
 
 	public static readonly Dictionary<string, float> Map = new()
 	{
-		{"111",-180f},{"112",-166.7f},{"113",-153.3f},
+		{"111",-1f},{"112",-166.7f},{"113",-153.3f},
 		{"121",-140f},{"122",-126.7f},{"123",-113.3f},
 		{"131",-100f},{"132",-86.7f},{"133",-73.3f},
 
@@ -89,7 +89,7 @@ private void _on_timer_timeout(){
 
 		{"311",60f},{"312",73.3f},{"313",86.7f},
 		{"321",100f},{"322",113.3f},{"323",126.7f},
-		{"331",140f},{"332",153.3f},{"333",166.7f}
+		{"331",140f},{"332",153.3f},{"333",1f}
 	};
 
 	private static bool Exists(string _command)
@@ -97,7 +97,9 @@ private void _on_timer_timeout(){
 		return Map.ContainsKey(_command);
 	}
 	public void Signal_pressed(int i)
-	{		_command += i.ToString();
+	{		
+			
+			_command += i.ToString();
 			if (_command.Length == 1) _timer.Start(1f); 
 			if (_command.Length == 3) 
 			{

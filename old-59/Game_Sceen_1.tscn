@@ -6,11 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cyihfwvymtrra" path="res://Prefabs/ship.tscn" id="3_c6k87"]
 [ext_resource type="Script" uid="uid://en40x3cmdfma" path="res://Signal1.cs" id="4_x31og"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c6k87"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_c6k87"]
-
 [sub_resource type="InputEventAction" id="InputEventAction_umdaw"]
 action = &"key_1"
 strength = 0.2
@@ -32,7 +27,47 @@ strength = 0.2
 [sub_resource type="Shortcut" id="Shortcut_x31og"]
 events = [SubResource("InputEventAction_qt2pb")]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c6k87"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c6k87"]
+
 [node name="Node2D" type="Node2D" unique_id=1991106589]
+
+[node name="Signal_1" type="Button" parent="." unique_id=1540545013]
+offset_left = 445.0
+offset_top = 307.0
+offset_right = 581.0
+offset_bottom = 443.0
+scale = Vector2(0.265, 0.265)
+action_mode = 0
+shortcut = SubResource("Shortcut_c6k87")
+icon = ExtResource("1_q8x2t")
+script = ExtResource("4_x31og")
+
+[node name="Signal_2" type="Button" parent="." unique_id=106060598]
+offset_left = 445.0
+offset_top = 464.5
+offset_right = 581.0
+offset_bottom = 600.5
+scale = Vector2(0.265, 0.265)
+action_mode = 0
+shortcut = SubResource("Shortcut_iwgoh")
+icon = ExtResource("1_q8x2t")
+script = ExtResource("4_x31og")
+i = 2
+
+[node name="Signal_3" type="Button" parent="." unique_id=915108351]
+offset_left = 445.0
+offset_top = 622.0
+offset_right = 581.0
+offset_bottom = 758.0
+scale = Vector2(0.265, 0.265)
+action_mode = 0
+shortcut = SubResource("Shortcut_x31og")
+icon = ExtResource("1_q8x2t")
+script = ExtResource("4_x31og")
+i = 3
 
 [node name="Radar" type="Node" parent="." unique_id=52127575]
 
@@ -61,37 +96,4 @@ offset_right = 34.75
 offset_bottom = -82.31805
 script = ExtResource("2_c6k87")
 
-[node name="Signal_1" type="Button" parent="Radar/Radar" unique_id=1540545013]
-offset_left = -128.75
-offset_top = -60.740353
-offset_right = 7.25
-offset_bottom = 75.25964
-scale = Vector2(0.265, 0.265)
-action_mode = 0
-shortcut = SubResource("Shortcut_c6k87")
-icon = ExtResource("1_q8x2t")
-script = ExtResource("4_x31og")
-
-[node name="Signal_2" type="Button" parent="Radar/Radar" unique_id=106060598]
-offset_left = -128.75
-offset_top = -19.681965
-offset_right = 7.25
-offset_bottom = 116.31804
-scale = Vector2(0.265, 0.265)
-action_mode = 0
-shortcut = SubResource("Shortcut_iwgoh")
-icon = ExtResource("1_q8x2t")
-script = ExtResource("4_x31og")
-i = 2
-
-[node name="Signal_3" type="Button" parent="Radar/Radar" unique_id=915108351]
-offset_left = -128.75
-offset_top = 21.376438
-offset_right = 7.25
-offset_bottom = 157.37643
-scale = Vector2(0.265, 0.265)
-action_mode = 0
-shortcut = SubResource("Shortcut_x31og")
-icon = ExtResource("1_q8x2t")
-script = ExtResource("4_x31og")
-i = 3
+[node name="Area2D" type="Area2D" parent="Radar/Radar" unique_id=1663196437]

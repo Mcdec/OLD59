@@ -1,101 +1,40 @@
 [gd_scene format=3 uid="uid://dwy6xb5eiffbi"]
 
 [ext_resource type="Texture2D" uid="uid://bmknt5wlqb60y" path="res://icon.svg" id="1_q8x2t"]
-[ext_resource type="Script" uid="uid://c43xes25xmun3" path="res://Scripts/Managers/GameManager/SpawnManager.cs" id="1_x31og"]
-[ext_resource type="Script" uid="uid://qabinobhhp6" path="res://Label.cs" id="2_c6k87"]
+[ext_resource type="Script" uid="uid://bulsndnx1ip0n" path="res://Scripts/Managers/GameManager/GameManager.cs" id="2_umdaw"]
 [ext_resource type="PackedScene" uid="uid://cyihfwvymtrra" path="res://Prefabs/ship.tscn" id="3_c6k87"]
-[ext_resource type="Script" uid="uid://en40x3cmdfma" path="res://Signal1.cs" id="4_x31og"]
-
-[sub_resource type="InputEventAction" id="InputEventAction_umdaw"]
-action = &"key_1"
-strength = 0.2
-
-[sub_resource type="Shortcut" id="Shortcut_c6k87"]
-events = [SubResource("InputEventAction_umdaw")]
-
-[sub_resource type="InputEventAction" id="InputEventAction_c6k87"]
-action = &"key_2"
-strength = 0.2
-
-[sub_resource type="Shortcut" id="Shortcut_iwgoh"]
-events = [SubResource("InputEventAction_c6k87")]
-
-[sub_resource type="InputEventAction" id="InputEventAction_qt2pb"]
-action = &"key_3"
-strength = 0.2
-
-[sub_resource type="Shortcut" id="Shortcut_x31og"]
-events = [SubResource("InputEventAction_qt2pb")]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c6k87"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+[ext_resource type="PackedScene" uid="uid://clird4okxtbw0" path="res://scenes/visual.tscn" id="4_x31og"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6k87"]
-radius = 193.75
 
 [node name="Node2D" type="Node2D" unique_id=1991106589]
 
-[node name="Signal_1" type="Button" parent="." unique_id=1540545013]
-offset_left = 445.0
-offset_top = 307.0
-offset_right = 581.0
-offset_bottom = 443.0
-scale = Vector2(0.265, 0.265)
-action_mode = 0
-shortcut = SubResource("Shortcut_c6k87")
-icon = ExtResource("1_q8x2t")
-script = ExtResource("4_x31og")
-
-[node name="Signal_2" type="Button" parent="." unique_id=106060598]
-offset_left = 445.0
-offset_top = 464.5
-offset_right = 581.0
-offset_bottom = 600.5
-scale = Vector2(0.265, 0.265)
-action_mode = 0
-shortcut = SubResource("Shortcut_iwgoh")
-icon = ExtResource("1_q8x2t")
-script = ExtResource("4_x31og")
-i = 2
-
-[node name="Signal_3" type="Button" parent="." unique_id=915108351]
-offset_left = 445.0
-offset_top = 622.0
-offset_right = 581.0
-offset_bottom = 758.0
-scale = Vector2(0.265, 0.265)
-action_mode = 0
-shortcut = SubResource("Shortcut_x31og")
-icon = ExtResource("1_q8x2t")
-script = ExtResource("4_x31og")
-i = 3
-
 [node name="Radar" type="Node" parent="." unique_id=52127575]
 
-[node name="Radar" type="Sprite2D" parent="Radar" unique_id=1620202990]
+[node name="Radar" type="Sprite2D" parent="Radar" unique_id=1620202990 node_paths=PackedStringArray("_label")]
 position = Vector2(960, 540)
 scale = Vector2(4, 3.836)
-texture = SubResource("CompressedTexture2D_c6k87")
-script = ExtResource("1_x31og")
+script = ExtResource("2_umdaw")
 ShipPrefab = ExtResource("3_c6k87")
+_label = NodePath("Label")
 
 [node name="Player" type="Node2D" parent="Radar/Radar" unique_id=585048358 groups=["player"]]
 scale = Vector2(0.04, 0.042)
 
 [node name="Sprite2D" type="Sprite2D" parent="Radar/Radar/Player" unique_id=1173023918]
+position = Vector2(612.5, 465.51477)
+scale = Vector2(8.1171875, 5.688549)
 texture = ExtResource("1_q8x2t")
 
-[node name="Bereg" type="Area2D" parent="Radar/Radar/Player" unique_id=31784077]
+[node name="Area2D" type="Area2D" parent="Radar/Radar/Player" unique_id=31784077]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Radar/Radar/Player/Bereg" unique_id=231808166 groups=["Bereg"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radar/Radar/Player/Area2D" unique_id=231808166]
 shape = SubResource("CircleShape2D_c6k87")
 
-[node name="Label" type="Label" parent="Radar/Radar" unique_id=993993494 groups=["Lable"]]
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -22.5
-offset_top = -96.454636
-offset_right = -110.5
-offset_bottom = -201.45462
-script = ExtResource("2_c6k87")
+[node name="Label" type="Label" parent="Radar/Radar" unique_id=993993494]
+offset_left = -5.25
+offset_top = -105.31805
+offset_right = 34.75
+offset_bottom = -82.31805
+
+[node name="visual" parent="." unique_id=594715592 instance=ExtResource("4_x31og")]

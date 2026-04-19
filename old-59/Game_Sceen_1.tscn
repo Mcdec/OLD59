@@ -6,11 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://vku43xnfvdi1" path="res://asset/sprites/mainScene_background.png" id="4_qt2pb"]
 [ext_resource type="Texture2D" uid="uid://mohpp63ig10m" path="res://asset/sprites/mainScene_plane2.png" id="5_ubasd"]
 [ext_resource type="Texture2D" uid="uid://cqkvrelh2ul5d" path="res://asset/sprites/mainScene_foreground.png" id="6_8lh83"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c6k87"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+[ext_resource type="Texture2D" uid="uid://cxxlrv4xrvd20" path="res://asset/sprites/mainScene_radar_glass.png" id="7_ubasd"]
+[ext_resource type="Texture2D" uid="uid://c6ui0f62mm1g8" path="res://asset/sprites/mainScene_button1.png" id="8_pn64h"]
+[ext_resource type="Texture2D" uid="uid://cupqhcbfhu1c7" path="res://asset/sprites/mainScene_button1p.png" id="9_cpx0u"]
+[ext_resource type="Script" uid="uid://db2ktrjwd0h74" path="res://script/visual/button_press_sprite.gd" id="9_kdtpy"]
+[ext_resource type="Texture2D" uid="uid://bs2m4xu02438u" path="res://asset/sprites/mainScene_button2.png" id="10_u02q5"]
+[ext_resource type="Texture2D" uid="uid://qaaskxpb5qrp" path="res://asset/sprites/mainScene_button2p.png" id="11_ak3nk"]
+[ext_resource type="Texture2D" uid="uid://dswxo2gk6638b" path="res://asset/sprites/mainScene_button3.png" id="12_ak3nk"]
+[ext_resource type="Texture2D" uid="uid://dcajd33qmt5gr" path="res://asset/sprites/mainScene_button3p.png" id="12_kdtpy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6k87"]
+
+[sub_resource type="Shortcut" id="Shortcut_38avj"]
 
 [node name="Node2D" type="Node2D" unique_id=1991106589]
 
@@ -19,7 +26,6 @@ load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.cte
 [node name="Radar" type="Sprite2D" parent="Radar" unique_id=1620202990 node_paths=PackedStringArray("_label")]
 position = Vector2(960, 540)
 scale = Vector2(4, 3.836)
-texture = SubResource("CompressedTexture2D_c6k87")
 script = ExtResource("2_umdaw")
 ShipPrefab = ExtResource("3_c6k87")
 _label = NodePath("Label")
@@ -52,18 +58,6 @@ offset_bottom = -362.0
 scale = Vector2(1.125, 1.125)
 alignment = 1
 
-[node name="Signal_1" type="Button" parent="Radar/VBoxContainer" unique_id=1540545013]
-layout_mode = 2
-icon = ExtResource("1_q8x2t")
-
-[node name="Signal_2" type="Button" parent="Radar/VBoxContainer" unique_id=106060598]
-layout_mode = 2
-icon = ExtResource("1_q8x2t")
-
-[node name="Signal_3" type="Button" parent="Radar/VBoxContainer" unique_id=915108351]
-layout_mode = 2
-icon = ExtResource("1_q8x2t")
-
 [node name="visual" type="Control" parent="." unique_id=1022161796]
 texture_filter = 3
 layout_mode = 3
@@ -83,3 +77,69 @@ texture = ExtResource("5_ubasd")
 position = Vector2(960, 540)
 scale = Vector2(4.3629627, 4.362963)
 texture = ExtResource("6_8lh83")
+
+[node name="radar_glass" type="Sprite2D" parent="visual" unique_id=725785231]
+position = Vector2(960, 540)
+scale = Vector2(4.3629627, 4.362963)
+texture = ExtResource("7_ubasd")
+
+[node name="Signal_1" type="Button" parent="." unique_id=1540545013]
+offset_left = 544.0
+offset_top = 387.0
+offset_right = 686.0
+offset_bottom = 530.0
+
+[node name="sprite" type="Sprite2D" parent="Signal_1" unique_id=1085470831]
+texture_filter = 3
+position = Vector2(1028.84, 567.03503)
+scale = Vector2(4.341, 4.341)
+texture = ExtResource("8_pn64h")
+script = ExtResource("9_kdtpy")
+
+[node name="sprite_pushed" type="Sprite2D" parent="Signal_1" unique_id=766215961]
+visible = false
+texture_filter = 3
+position = Vector2(1028.84, 567.03503)
+scale = Vector2(4.341, 4.341)
+texture = ExtResource("9_cpx0u")
+
+[node name="Signal_2" type="Button" parent="." unique_id=106060598]
+offset_left = 538.0
+offset_top = 524.0
+offset_right = 681.0
+offset_bottom = 668.0
+
+[node name="sprite" type="Sprite2D" parent="Signal_2" unique_id=1061276990]
+texture_filter = 3
+position = Vector2(1034.0001, 578)
+scale = Vector2(4.341, 4.341)
+texture = ExtResource("10_u02q5")
+script = ExtResource("9_kdtpy")
+
+[node name="sprite_pushed" type="Sprite2D" parent="Signal_2" unique_id=1801851026]
+visible = false
+texture_filter = 3
+position = Vector2(1028.84, 567.03503)
+scale = Vector2(4.341, 4.341)
+texture = ExtResource("11_ak3nk")
+
+[node name="Signal_3" type="Button" parent="." unique_id=915108351]
+offset_left = 524.0
+offset_top = 670.0
+offset_right = 669.0
+offset_bottom = 817.0
+shortcut = SubResource("Shortcut_38avj")
+
+[node name="sprite" type="Sprite2D" parent="Signal_3" unique_id=1709980649]
+texture_filter = 3
+position = Vector2(1038.0001, 579)
+scale = Vector2(4.341, 4.341)
+texture = ExtResource("12_ak3nk")
+script = ExtResource("9_kdtpy")
+
+[node name="sprite_pushed" type="Sprite2D" parent="Signal_3" unique_id=644330373]
+visible = false
+texture_filter = 3
+position = Vector2(1028.84, 567.03503)
+scale = Vector2(4.341, 4.341)
+texture = ExtResource("12_kdtpy")

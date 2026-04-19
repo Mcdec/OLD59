@@ -1,70 +1,46 @@
 using Godot;
 using System;
-using System.Reflection.Metadata;
-using static System.Net.Mime.MediaTypeNames;
 
 public partial class Ship : Node2D
 {
-	Godot.Timer _timer = new Godot.Timer();
 	[Export] public float Speed = 1f;
-	[Export] public float RotationSpeed = 0.1f;
+	[Export] public float RotationSpeed = 3f;
 	[Export] public float RotationSmooth = 5f;
-	private float input = 0;
 	private Node2D Player;
-	Vector2 _velocity;
+	Vector2 Velocity;
 	private float _targetRotation;
 	public override void _Ready()
 	{
-		AddChild(_timer);
-		_timer.WaitTime = 1f;
-		_timer.OneShot = false;
-		_timer.Connect("timeout", Callable.From(_on_timer_timeout));
-		AddToGroup("ship");
 		Player = GetTree().GetFirstNodeInGroup("player") as Node2D;
-		var _target = Player.Position - Position;
-		var rng = new RandomNumberGenerator();
-		rng.Randomize();
-		Speed = rng.RandiRange(10, 30);
-		RotationSpeed *= rng.RandiRange(1, 5);
-		_targetRotation = _target.Angle() + 90f;
-		Rotation = _targetRotation;
-		_timer.Start(2f);
 	}
 	public override void _PhysicsProcess(double delta)
 	{
-
-
-		if (GetDistanceToPlayer() > 450) 
-		{
-			GetNode<GameManager>("/root/_gameManager").Score += 1;
-			GetNode<GameManager>("/root/_gameManager").Points += 10;
-			QueueFree();
-		}
 		float dt = (float)delta;
+
 		HandleRotationInput(dt);
 		ApplySmoothRotation(dt);
 		MoveForward(dt);
-
-		Position += _velocity * dt;
+		GD.Print(GetDistanceToPlayer());
+		GD.Print(Position);
+		Position += Velocity * dt;
 	}
 
 	private void HandleRotationInput(float delta)
 	{
-
+		float input = 0;
 		_targetRotation += input * RotationSpeed * delta;
-
 	}
 
 	private void ApplySmoothRotation(float delta)
 	{
-
+		
 		Rotation = Mathf.LerpAngle(Rotation, _targetRotation, RotationSmooth * delta);
 	}
 
 	private void MoveForward(float delta)
 	{
 
-		_velocity = Vector2.Up.Rotated(Rotation) * Speed;
+		Position += new Vector2(1*Speed * delta,1*Speed * delta) ;
 
 
 	}
@@ -76,29 +52,5 @@ public partial class Ship : Node2D
 		return GlobalPosition.DistanceTo(Player.GlobalPosition);
 	}
 
-	private void updaterotation(float i)
-	{
 
-		if (_timer.TimeLeft > 0.0001) return;
-		input = i;
-		_timer.Start(2f);
-	}
-	private void _on_timer_timeout(){
-		_timer.Stop();
-		input = 0;}
-
-
-	void _on_area_2d_area_entered(Area2D area)
-	{
-		if (area.Name == "Bereg")
-		{
-			GetNode<GameManager>("/root/_gameManager").Score -= 10;
-			QueueFree();
-		}
-		else if (area.Name == "Ship")
-		{
-			GetNode<GameManager>("/root/_gameManager").Score -= 1;
-			QueueFree();
-		}
-	}
 }

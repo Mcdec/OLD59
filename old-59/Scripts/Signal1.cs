@@ -12,6 +12,6 @@ public partial class Signal1 : Button
 	private void ButtonPressed()
 {
 		 GetNode<GameManager>("/root/_gameManager").Signal_pressed(i);
-		GD.Print("Push");
+		
 	}
 }

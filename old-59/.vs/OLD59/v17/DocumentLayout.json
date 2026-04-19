@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Scripts\\Signal1.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Signal1.cs",
               "RelativeToolTip": "Scripts\\Signal1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-19T12:37:53.981Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "Scripts\\Ship\\Ship.cs",
               "ViewState": "AgIAABQAAAAAAAAAAADwvyoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T11:02:31.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T11:02:31.793Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\GameManager.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAIwEQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T10:52:56.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T10:52:56.826Z"
             }
           ]
         }

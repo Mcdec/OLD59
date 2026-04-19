@@ -31,6 +31,7 @@ events = [SubResource("InputEventAction_qt2pb")]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6k87"]
+radius = 193.75
 
 [node name="Node2D" type="Node2D" unique_id=1991106589]
 
@@ -84,14 +85,17 @@ scale = Vector2(0.04, 0.042)
 [node name="Sprite2D" type="Sprite2D" parent="Radar/Radar/Player" unique_id=1173023918]
 texture = ExtResource("1_q8x2t")
 
-[node name="Area2D" type="Area2D" parent="Radar/Radar/Player" unique_id=31784077]
+[node name="Bereg" type="Area2D" parent="Radar/Radar/Player" unique_id=31784077]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Radar/Radar/Player/Area2D" unique_id=231808166]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radar/Radar/Player/Bereg" unique_id=231808166 groups=["Bereg"]]
 shape = SubResource("CircleShape2D_c6k87")
 
-[node name="Label" type="Label" parent="Radar/Radar" unique_id=993993494]
-offset_left = -5.25
-offset_top = -105.31805
-offset_right = 34.75
-offset_bottom = -82.31805
+[node name="Label" type="Label" parent="Radar/Radar" unique_id=993993494 groups=["Lable"]]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -96.454636
+offset_right = -110.5
+offset_bottom = -201.45462
 script = ExtResource("2_c6k87")

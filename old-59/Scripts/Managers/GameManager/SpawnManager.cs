@@ -4,7 +4,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 public partial class SpawnManager : Node
 {
-	public float SpawnCost = 20f;
+	public float SpawnCost = 15f;
 	private Node2D Player;
 	private float points;
 	Godot.Timer _timer = new Godot.Timer();
@@ -66,7 +66,7 @@ public partial class SpawnManager : Node
 		rng.Randomize();
 		float angle = rng.RandiRange(0, 360);
 		float radius = rng.RandiRange(minRadius, maxRadius);
-
+		
 		Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
 		return offset;
 
@@ -78,11 +78,7 @@ public partial class SpawnManager : Node
 	
 	AddChild(ship);
 	
-	SetupShip(ship);
-}
-	private void SetupShip(Node2D ship)
-{
 	
-
 }
+
 }

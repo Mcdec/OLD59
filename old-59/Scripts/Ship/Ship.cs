@@ -15,7 +15,6 @@ public partial class Ship : Node2D
 	private float _targetRotation;
 	public override void _Ready()
 	{
-		Visible = false;
 		AddChild(_timer);
 		_timer.WaitTime = 1f;
 		_timer.OneShot = false;

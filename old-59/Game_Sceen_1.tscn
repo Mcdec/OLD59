@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bmknt5wlqb60y" path="res://icon.svg" id="1_q8x2t"]
 [ext_resource type="Script" uid="uid://bulsndnx1ip0n" path="res://Scripts/Managers/GameManager/GameManager.cs" id="2_umdaw"]
 [ext_resource type="PackedScene" uid="uid://cyihfwvymtrra" path="res://Prefabs/ship.tscn" id="3_c6k87"]
+[ext_resource type="Texture2D" uid="uid://vku43xnfvdi1" path="res://asset/sprites/mainScene_background.png" id="4_qt2pb"]
+[ext_resource type="Texture2D" uid="uid://mohpp63ig10m" path="res://asset/sprites/mainScene_plane2.png" id="5_ubasd"]
+[ext_resource type="Texture2D" uid="uid://cqkvrelh2ul5d" path="res://asset/sprites/mainScene_foreground.png" id="6_8lh83"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c6k87"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
@@ -60,3 +63,23 @@ icon = ExtResource("1_q8x2t")
 [node name="Signal_3" type="Button" parent="Radar/VBoxContainer" unique_id=915108351]
 layout_mode = 2
 icon = ExtResource("1_q8x2t")
+
+[node name="visual" type="Control" parent="." unique_id=1022161796]
+texture_filter = 3
+layout_mode = 3
+anchors_preset = 0
+
+[node name="background" type="Sprite2D" parent="visual" unique_id=1476363524]
+position = Vector2(960, 540)
+scale = Vector2(4.340741, 4.3407407)
+texture = ExtResource("4_qt2pb")
+
+[node name="plane2" type="Sprite2D" parent="visual" unique_id=145303374]
+position = Vector2(960, 540)
+scale = Vector2(4.318518, 4.3185186)
+texture = ExtResource("5_ubasd")
+
+[node name="foreground" type="Sprite2D" parent="visual" unique_id=120323628]
+position = Vector2(960, 540)
+scale = Vector2(4.3629627, 4.362963)
+texture = ExtResource("6_8lh83")

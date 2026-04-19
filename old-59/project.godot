@@ -39,6 +39,21 @@ folder_colors={
 "res://script/": "blue"
 }
 
+[input]
+
+key_1={
+"deadzone": 0.2,
+"events": []
+}
+key_2={
+"deadzone": 0.2,
+"events": []
+}
+key_3={
+"deadzone": 0.2,
+"events": []
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

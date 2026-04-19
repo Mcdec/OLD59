@@ -121,6 +121,7 @@ theme_type_variation = &"FlatButton"
 theme_override_styles/pressed = SubResource("StyleBoxFlat_b1kid")
 shortcut = SubResource("Shortcut_b1kid")
 script = ExtResource("8_wq562")
+i = 2
 
 [node name="sprite" type="Sprite2D" parent="Signal_2" unique_id=2138136092]
 texture_filter = 3
@@ -147,6 +148,7 @@ theme_type_variation = &"FlatButton"
 theme_override_styles/pressed = SubResource("StyleBoxFlat_n1hai")
 shortcut = SubResource("Shortcut_38avj")
 script = ExtResource("8_wq562")
+i = 3
 
 [node name="sprite" type="Sprite2D" parent="Signal_3" unique_id=1808013857]
 texture_filter = 3

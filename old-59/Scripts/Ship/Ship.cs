@@ -5,6 +5,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 public partial class Ship : Node2D
 {
+	Node2D ThisShip;
 	Godot.Timer _timer = new Godot.Timer();
 	[Export] public float Speed = 1f;
 	[Export] public float RotationSpeed = 0.1f;
@@ -15,6 +16,7 @@ public partial class Ship : Node2D
 	private float _targetRotation;
 	public override void _Ready()
 	{
+		ThisShip = this;
 		AddChild(_timer);
 		_timer.WaitTime = 1f;
 		_timer.OneShot = false;
@@ -88,17 +90,18 @@ public partial class Ship : Node2D
 		input = 0;}
 
 
-	void _on_area_2d_area_entered(Area2D area)
+	void _on_ship_area_entered(Area2D area)
 	{
 		if (area.Name == "Bereg")
 		{
+			
 			GetNode<GameManager>("/root/_gameManager").Score -= 10;
-			QueueFree();
+			ThisShip.QueueFree();
 		}
 		else if (area.Name == "Ship")
 		{
 			GetNode<GameManager>("/root/_gameManager").Score -= 1;
-			QueueFree();
+			ThisShip.QueueFree();
 		}
 	}
 }

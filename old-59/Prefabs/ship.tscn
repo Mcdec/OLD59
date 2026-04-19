@@ -21,3 +21,5 @@ texture = SubResource("CompressedTexture2D_umdaw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ship" unique_id=1909188487]
 position = Vector2(0.25, 0.75)
 shape = SubResource("CircleShape2D_7nyfi")
+
+[connection signal="area_entered" from="Ship" to="." method="_on_ship_area_entered"]

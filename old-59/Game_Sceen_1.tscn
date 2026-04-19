@@ -33,7 +33,6 @@ load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.cte
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6k87"]
 radius = 193.75
 
-[node name="visual" parent="." unique_id=594715592 instance=ExtResource("4_x31og")]
 [node name="Node2D" type="Node2D" unique_id=1991106589]
 
 [node name="Signal_1" type="Button" parent="." unique_id=1540545013]

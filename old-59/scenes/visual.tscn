@@ -16,26 +16,17 @@
 [ext_resource type="Texture2D" uid="uid://dswxo2gk6638b" path="res://asset/sprites/mainScene_button3.png" id="13_8mgy3"]
 [ext_resource type="Texture2D" uid="uid://dcajd33qmt5gr" path="res://asset/sprites/mainScene_button3p.png" id="14_jonpp"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wq562"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
 [sub_resource type="InputEventAction" id="InputEventAction_b1kid"]
 action = &"key_1"
 
 [sub_resource type="Shortcut" id="Shortcut_n1hai"]
 events = [SubResource("InputEventAction_b1kid")]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1kid"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
 [sub_resource type="InputEventAction" id="InputEventAction_wq562"]
 action = &"key_2"
 
 [sub_resource type="Shortcut" id="Shortcut_b1kid"]
 events = [SubResource("InputEventAction_wq562")]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1hai"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="InputEventAction" id="InputEventAction_n1hai"]
 action = &"key_3"
@@ -91,8 +82,6 @@ offset_left = 544.0
 offset_top = 387.0
 offset_right = 686.0
 offset_bottom = 530.0
-theme_type_variation = &"FlatButton"
-theme_override_styles/pressed = SubResource("StyleBoxFlat_wq562")
 shortcut = SubResource("Shortcut_n1hai")
 script = ExtResource("8_wq562")
 
@@ -117,8 +106,6 @@ offset_left = 538.0
 offset_top = 524.0
 offset_right = 681.0
 offset_bottom = 668.0
-theme_type_variation = &"FlatButton"
-theme_override_styles/pressed = SubResource("StyleBoxFlat_b1kid")
 shortcut = SubResource("Shortcut_b1kid")
 script = ExtResource("8_wq562")
 
@@ -143,8 +130,6 @@ offset_left = 524.0
 offset_top = 670.0
 offset_right = 669.0
 offset_bottom = 817.0
-theme_type_variation = &"FlatButton"
-theme_override_styles/pressed = SubResource("StyleBoxFlat_n1hai")
 shortcut = SubResource("Shortcut_38avj")
 script = ExtResource("8_wq562")
 

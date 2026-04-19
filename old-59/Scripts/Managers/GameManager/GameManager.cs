@@ -1,130 +1,83 @@
 using Godot;
 using System;
-using System.Collections.Generic;
 using System.Reflection.Emit;
-using System.Reflection.Metadata;
-using System.Threading;
-using System.Windows.Input;
 
-public partial class GameManager : Node
+public partial class GameManager : Node2D
 {
-	public static GameManager Instance { get; private set; }
-
-	
-	
+	[Export] public PackedScene ShipPrefab;
 	private Node2D Player;
+	[Export] public float SpawnCost = 1000f;
+	[Export] public float IncomePerSecond = 1f;
 	
-	public float IncomePerSecond = 1f;
-	Godot.Timer _timer = new Godot.Timer();
-	private string _command = null;
-	private float angle = 0f;
-
-	private float points = 15;
-	private float score = 0;
-	public float Points
-	{
-		get
-		{
-			return points;
-		}
-		set {
-			points = value;
-
-			GetTree().CallGroup("points", "updatepoints", value);
-		}
-	}
-	public float Score
-	{
-		get
-		{
-			return score;
-		}
-		set
-		{
-			if (score < 0) score = 0;
-			score = value;
-
-			GetTree().CallGroup("Lable", "updatescore", value);
-		}
-	}
-	public float Angle
-	{
-		get
-		{
-			return angle;
-		}
-		set
-		{
-			angle = value;
-
-			GetTree().CallGroup("angle", "updateangle", value);
-		}
-	}
-
-
+	private float _points = 999;
+	[Export] public Godot.Label _label;
+	
 	public override void _Ready()
 	{
-		AddChild(_timer);
-		_timer.WaitTime = 1f;
-		_timer.OneShot = false;
-		//	_timer.Timeout += _on_timer_timeout;
-		_timer.Connect("timeout", Callable.From(_on_timer_timeout));
-
 		Player = GetTree().GetFirstNodeInGroup("player") as Node2D;
+		_label = GetNode<Godot.Label>("Label");
 	}
 	public override void _Process(double delta)
 	{
-		Points += IncomePerSecond * (float)delta;
 		
+		_points += IncomePerSecond * (float)delta;
+		_label.Text = $"Points: {(int)_points}";
+		TrySpawnShip();
+		
+
 	}
 
-	
-
-	
-
-	
-	
-private void _on_timer_timeout(){
-		if (Exists(_command)) {
-			Map.TryGetValue(_command, out float angle);
-			Angle = angle;
-		}
-			_command = null;
-}
-
-	public static readonly Dictionary<string, float> Map = new()
+	private void TrySpawnShip()
 	{
-		{"111",-1f},{"112",-166.7f},{"113",-153.3f},
-		{"121",-140f},{"122",-126.7f},{"123",-113.3f},
-		{"131",-100f},{"132",-86.7f},{"133",-73.3f},
+		if (_points < SpawnCost)
+			return;
 
-		{"211",-60f},{"212",-46.7f},{"213",-33.3f},
-		{"221",-20f},{"222",-6.7f},{"223",6.7f},
-		{"231",20f},{"232",33.3f},{"233",46.7f},
+		_points -= SpawnCost;
 
-		{"311",60f},{"312",73.3f},{"313",86.7f},
-		{"321",100f},{"322",113.3f},{"323",126.7f},
-		{"331",140f},{"332",153.3f},{"333",1f}
-	};
+		SpawnShip();
+	}
 
-	private static bool Exists(string _command)
+	private void SpawnShip()
 	{
-		return Map.ContainsKey(_command);
+		var ship = ShipPrefab.Instantiate<Node2D>();
+		ship.GlobalPosition = GetSpawnPosition();
+		GD.Print(ship.Position);
+		AddChild(ship);
+		
+		SetupShip(ship);
 	}
-	public void Signal_pressed(int i)
-	{		
-			
-			_command += i.ToString();
-			if (_command.Length == 1) _timer.Start(1f); 
-			if (_command.Length == 3) 
-			{
-			_timer.Stop();
-			if (Exists(_command)) {
-				Map.TryGetValue(_command, out float angle);
-				Angle = angle;
 
-			}
-			_command = null;
-		}		 
+	private Vector2 GetSpawnPosition()
+{
+	
+	
+		int minRadius = 20;
+		int maxRadius = 100;
+		var rng = new RandomNumberGenerator();
+		rng.Randomize();
+		float angle = rng.RandiRange(0, 360);
+		float radius = rng.RandiRange(minRadius, maxRadius);
+
+		Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
+		return offset;
+
 	}
+	private void SetupShip(Node2D ship)
+	{
+		Vector2 toPlayer = Player.GlobalPosition - ship.GlobalPosition;
+
+		float baseAngle = toPlayer.Angle();
+		var rng = new RandomNumberGenerator();
+		rng.Randomize();
+		
+		float randomOffset = Mathf.DegToRad(rng.RandiRange(-20, 20));
+
+		ship.Rotation = baseAngle + randomOffset;
+
+
+
+	}
+
+
+
 }

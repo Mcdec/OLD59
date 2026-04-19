@@ -4,20 +4,7 @@
 [ext_resource type="Script" uid="uid://c43xes25xmun3" path="res://Scripts/Managers/GameManager/SpawnManager.cs" id="1_x31og"]
 [ext_resource type="Script" uid="uid://qabinobhhp6" path="res://Label.cs" id="2_c6k87"]
 [ext_resource type="PackedScene" uid="uid://cyihfwvymtrra" path="res://Prefabs/ship.tscn" id="3_c6k87"]
-[ext_resource type="Script" uid="uid://cepseyy61rjnp" path="res://script/visual/mainScene_visual.gd" id="4_4jxma"]
-[ext_resource type="Texture2D" uid="uid://vku43xnfvdi1" path="res://asset/sprites/mainScene_background.png" id="4_qt2pb"]
-[ext_resource type="Texture2D" uid="uid://dmdt7vtw1uf7y" path="res://asset/sprites/mainScene_window.png" id="5_kdtpy"]
-[ext_resource type="Texture2D" uid="uid://cqkvrelh2ul5d" path="res://asset/sprites/mainScene_foreground.png" id="6_8lh83"]
-[ext_resource type="Texture2D" uid="uid://cxxlrv4xrvd20" path="res://asset/sprites/mainScene_radar_glass.png" id="7_ubasd"]
-[ext_resource type="Texture2D" uid="uid://c6ui0f62mm1g8" path="res://asset/sprites/mainScene_button1.png" id="8_pn64h"]
-[ext_resource type="Texture2D" uid="uid://cupqhcbfhu1c7" path="res://asset/sprites/mainScene_button1p.png" id="9_cpx0u"]
-[ext_resource type="Texture2D" uid="uid://dqq46qg8t2d2j" path="res://asset/sprites/mainScene_light.png" id="9_fhjbf"]
-[ext_resource type="Script" uid="uid://db2ktrjwd0h74" path="res://script/visual/button_press_sprite.gd" id="9_kdtpy"]
-[ext_resource type="AudioStream" uid="uid://dp65jqhcgqmqe" path="res://asset/sounds/BGS Thunder.mp3" id="10_fhjbf"]
-[ext_resource type="Texture2D" uid="uid://bs2m4xu02438u" path="res://asset/sprites/mainScene_button2.png" id="10_u02q5"]
-[ext_resource type="Texture2D" uid="uid://qaaskxpb5qrp" path="res://asset/sprites/mainScene_button2p.png" id="11_ak3nk"]
-[ext_resource type="Texture2D" uid="uid://dswxo2gk6638b" path="res://asset/sprites/mainScene_button3.png" id="12_ak3nk"]
-[ext_resource type="Texture2D" uid="uid://dcajd33qmt5gr" path="res://asset/sprites/mainScene_button3p.png" id="12_kdtpy"]
+[ext_resource type="Script" uid="uid://en40x3cmdfma" path="res://Signal1.cs" id="4_x31og"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_umdaw"]
 action = &"key_1"
@@ -96,8 +83,6 @@ ShipPrefab = ExtResource("3_c6k87")
 scale = Vector2(0.04, 0.042)
 
 [node name="Sprite2D" type="Sprite2D" parent="Radar/Radar/Player" unique_id=1173023918]
-position = Vector2(612.5, 465.51477)
-scale = Vector2(8.1171875, 5.688549)
 texture = ExtResource("1_q8x2t")
 
 [node name="Bereg" type="Area2D" parent="Radar/Radar/Player" unique_id=31784077]
@@ -105,113 +90,12 @@ texture = ExtResource("1_q8x2t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Radar/Radar/Player/Bereg" unique_id=231808166 groups=["Bereg"]]
 shape = SubResource("CircleShape2D_c6k87")
 
-[node name="Label" type="Label" parent="Radar/Radar" unique_id=993993494]
-offset_left = -5.25
-offset_top = -105.31805
-offset_right = 34.75
-offset_bottom = -82.31805
-
-[node name="visual" type="Control" parent="." unique_id=1022161796]
-top_level = true
-texture_filter = 3
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("4_4jxma")
-
-[node name="background" type="Sprite2D" parent="visual" unique_id=1476363524]
-position = Vector2(960, 540)
-scale = Vector2(4.340741, 4.3407407)
-texture = ExtResource("4_qt2pb")
-
-[node name="window" type="Sprite2D" parent="visual" unique_id=145303374]
-position = Vector2(960, 540)
-scale = Vector2(4.318518, 4.3185186)
-texture = ExtResource("5_kdtpy")
-
-[node name="foreground" type="Sprite2D" parent="visual" unique_id=120323628]
-position = Vector2(960, 540)
-scale = Vector2(4.3629627, 4.362963)
-texture = ExtResource("6_8lh83")
-
-[node name="radar_glass" type="Sprite2D" parent="visual" unique_id=725785231]
-position = Vector2(960, 540)
-scale = Vector2(4.3629627, 4.362963)
-texture = ExtResource("7_ubasd")
-
-[node name="light" type="Sprite2D" parent="visual" unique_id=637659912]
-position = Vector2(960, 540)
-scale = Vector2(4.340741, 4.3407407)
-texture = ExtResource("9_fhjbf")
-
-[node name="SFX" type="Node" parent="visual" unique_id=148633550]
-
-[node name="BG thunder" type="AudioStreamPlayer" parent="visual/SFX" unique_id=660605794]
-stream = ExtResource("10_fhjbf")
-autoplay = true
-
-[node name="AudioListener2D" type="AudioListener2D" parent="visual/SFX" unique_id=1757664308]
-current = true
-
-[node name="Signal_1" type="Button" parent="." unique_id=1540545013]
-top_level = true
-offset_left = 544.0
-offset_top = 387.0
-offset_right = 686.0
-offset_bottom = 530.0
-
-[node name="sprite" type="Sprite2D" parent="Signal_1" unique_id=1085470831]
-texture_filter = 3
-position = Vector2(1028.84, 567.03503)
-scale = Vector2(4.341, 4.341)
-texture = ExtResource("8_pn64h")
-script = ExtResource("9_kdtpy")
-
-[node name="sprite_pushed" type="Sprite2D" parent="Signal_1" unique_id=766215961]
-visible = false
-texture_filter = 3
-position = Vector2(1028.84, 567.03503)
-scale = Vector2(4.341, 4.341)
-texture = ExtResource("9_cpx0u")
-
-[node name="Signal_2" type="Button" parent="." unique_id=106060598]
-top_level = true
-offset_left = 538.0
-offset_top = 524.0
-offset_right = 681.0
-offset_bottom = 668.0
-
-[node name="sprite" type="Sprite2D" parent="Signal_2" unique_id=1061276990]
-texture_filter = 3
-position = Vector2(1034.0001, 578)
-scale = Vector2(4.341, 4.341)
-texture = ExtResource("10_u02q5")
-script = ExtResource("9_kdtpy")
-
-[node name="sprite_pushed" type="Sprite2D" parent="Signal_2" unique_id=1801851026]
-visible = false
-texture_filter = 3
-position = Vector2(1028.84, 567.03503)
-scale = Vector2(4.341, 4.341)
-texture = ExtResource("11_ak3nk")
-
-[node name="Signal_3" type="Button" parent="." unique_id=915108351]
-top_level = true
-offset_left = 524.0
-offset_top = 670.0
-offset_right = 669.0
-offset_bottom = 817.0
-shortcut = SubResource("Shortcut_38avj")
-
-[node name="sprite" type="Sprite2D" parent="Signal_3" unique_id=1709980649]
-texture_filter = 3
-position = Vector2(1038.0001, 579)
-scale = Vector2(4.341, 4.341)
-texture = ExtResource("12_ak3nk")
-script = ExtResource("9_kdtpy")
-
-[node name="sprite_pushed" type="Sprite2D" parent="Signal_3" unique_id=644330373]
-visible = false
-texture_filter = 3
-position = Vector2(1028.84, 567.03503)
-scale = Vector2(4.341, 4.341)
-texture = ExtResource("12_kdtpy")
+[node name="Label" type="Label" parent="Radar/Radar" unique_id=993993494 groups=["Lable"]]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -96.454636
+offset_right = -110.5
+offset_bottom = -201.45462
+script = ExtResource("2_c6k87")

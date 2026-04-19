@@ -15,6 +15,7 @@ public partial class Ship : Node2D
 	private float _targetRotation;
 	public override void _Ready()
 	{
+		Visible = false;
 		AddChild(_timer);
 		_timer.WaitTime = 1f;
 		_timer.OneShot = false;
@@ -22,7 +23,10 @@ public partial class Ship : Node2D
 		AddToGroup("ship");
 		Player = GetTree().GetFirstNodeInGroup("player") as Node2D;
 		var _target = Player.Position - Position;
-		
+		var rng = new RandomNumberGenerator();
+		rng.Randomize();
+		Speed = rng.RandiRange(10, 30);
+		RotationSpeed *= rng.RandiRange(1, 5);
 		_targetRotation = _target.Angle() + 90f;
 		Rotation = _targetRotation;
 		_timer.Start(2f);
@@ -33,7 +37,8 @@ public partial class Ship : Node2D
 
 		if (GetDistanceToPlayer() > 450) 
 		{
-			GetNode<GameManager>("/root/_gameManager").Points += 15;
+			GetNode<GameManager>("/root/_gameManager").Score += 1;
+			GetNode<GameManager>("/root/_gameManager").Points += 10;
 			QueueFree();
 		}
 		float dt = (float)delta;
@@ -84,5 +89,17 @@ public partial class Ship : Node2D
 		input = 0;}
 
 
-
+	void _on_area_2d_area_entered(Area2D area)
+	{
+		if (area.Name == "Bereg")
+		{
+			GetNode<GameManager>("/root/_gameManager").Score -= 10;
+			QueueFree();
+		}
+		else if (area.Name == "Ship")
+		{
+			GetNode<GameManager>("/root/_gameManager").Score -= 1;
+			QueueFree();
+		}
+	}
 }

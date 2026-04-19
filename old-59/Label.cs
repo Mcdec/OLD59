@@ -6,10 +6,10 @@ public partial class Label : Godot.Label
 	
 	public override void _Ready()
 	{
-		AddToGroup("points");
+		AddToGroup("Lable");
 	}
 
-	private void updatepoints(float i)
+	private void updatescore(float i)
 	{
 		Text = i.ToString();
 	}

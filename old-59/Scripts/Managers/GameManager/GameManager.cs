@@ -20,6 +20,7 @@ public partial class GameManager : Node
 	private float angle = 0f;
 
 	private float points = 15;
+	private float score = 0;
 	public float Points
 	{
 		get
@@ -30,6 +31,20 @@ public partial class GameManager : Node
 			points = value;
 
 			GetTree().CallGroup("points", "updatepoints", value);
+		}
+	}
+	public float Score
+	{
+		get
+		{
+			return score;
+		}
+		set
+		{
+			if (score < 0) score = 0;
+			score = value;
+
+			GetTree().CallGroup("Lable", "updatescore", value);
 		}
 	}
 	public float Angle

@@ -5,7 +5,6 @@ using static System.Net.Mime.MediaTypeNames;
 public partial class SpawnManager : Node
 {
 	public float SpawnCost = 15f;
-	
 	private Node2D Player;
 	private float points;
 	Godot.Timer _timer = new Godot.Timer();

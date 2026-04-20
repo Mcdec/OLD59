@@ -22,7 +22,7 @@ var lightning_timer : Timer = Timer.new()
 func _ready() -> void:
 	lightning_timer.timeout.connect(lightning_strike)
 	add_child(lightning_timer)
-	lightning_timer.start(lightning_interval)
+	#lightning_timer.start(lightning_interval)
 	lightning_timer.wait_time = lightning_interval
 
 #func _physics_process(delta: float) -> void:

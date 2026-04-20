@@ -13,7 +13,6 @@ public partial class GameManager : Node
 	
 	
 	private Node2D Player;
-	private Sprite2D RaderCircle;
 	public float IncomePerSecond = 1f;
 	Godot.Timer _timer = new Godot.Timer();
 	private string _command = null;
@@ -65,7 +64,7 @@ public partial class GameManager : Node
 
 	public override void _Ready()
 	{
-		RaderCircle = GetNode<Sprite2D>("RadarCircle");
+		
 		AddChild(_timer);
 		_timer.WaitTime = 1f;
 		_timer.OneShot = false;
@@ -90,6 +89,7 @@ private void _on_timer_timeout(){
 		if (Exists(_command)) {
 			Map.TryGetValue(_command, out float angle);
 			Angle = angle;
+			GetTree().CallGroup("RadarCircle", "RadarStart");
 		}
 			_command = null;
 }
@@ -125,7 +125,7 @@ private void _on_timer_timeout(){
 			{
 				Map.TryGetValue(_command, out float angle);
 				Angle = angle;
-				
+				GetTree().CallGroup("RadarCircle", "RadarStart");
 				_command = null;
 			}
 			

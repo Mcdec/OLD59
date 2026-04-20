@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\signal1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\signal1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\managers\\gamemanager\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|solutionrelative:scripts\\managers\\gamemanager\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90D905E3-324E-4620-9D1B-643558F7C9C4}|OLD59.csproj|f:\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\old_plevat\\old-59\\scripts\\managers\\gamemanager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Signal1.cs",
-              "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Signal1.cs",
-              "RelativeDocumentMoniker": "Scripts\\Signal1.cs",
-              "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Signal1.cs",
-              "RelativeToolTip": "Scripts\\Signal1.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAcAAAABAAAAAAAAAA==",
+              "Title": "SpawnManager.cs",
+              "DocumentMoniker": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\SpawnManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\Managers\\GameManager\\SpawnManager.cs",
+              "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\SpawnManager.cs",
+              "RelativeToolTip": "Scripts\\Managers\\GameManager\\SpawnManager.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:37:53.981Z",
+              "WhenOpened": "2026-04-20T10:25:05.332Z",
               "EditorCaption": ""
             },
             {
@@ -57,9 +57,10 @@
               "RelativeDocumentMoniker": "Scripts\\Managers\\GameManager\\GameManager.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\GameManager.cs",
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\GameManager.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAIwEQAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T10:52:56.826Z"
+              "WhenOpened": "2026-04-18T10:52:56.826Z",
+              "EditorCaption": ""
             }
           ]
         }

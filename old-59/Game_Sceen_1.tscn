@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c43xes25xmun3" path="res://Scripts/Managers/GameManager/SpawnManager.cs" id="1_x31og"]
 [ext_resource type="PackedScene" uid="uid://cyihfwvymtrra" path="res://Prefabs/ship.tscn" id="2_iwgoh"]
-[ext_resource type="Script" uid="uid://dcc27i66coq8b" path="res://Scripts/Label.cs" id="3_x31og"]
+[ext_resource type="Script" uid="uid://cict0tar40wn" path="res://Scripts/Managers/GameManager/RadarCircle.cs" id="3_iwgoh"]
+[ext_resource type="Script" uid="uid://dcc27i66coq8b" path="res://Scripts/Managers/GameManager/Label.cs" id="3_x31og"]
 [ext_resource type="PackedScene" uid="uid://clird4okxtbw0" path="res://scenes/visual.tscn" id="4_x31og"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6k87"]
@@ -20,6 +21,9 @@ ShipPrefab = ExtResource("2_iwgoh")
 
 [node name="Player" type="Node2D" parent="Radar/Radar" unique_id=585048358 groups=["player"]]
 scale = Vector2(0.04, 0.042)
+
+[node name="RadarCircle" type="Sprite2D" parent="Radar/Radar/Player" unique_id=1489249339]
+script = ExtResource("3_iwgoh")
 
 [node name="Bereg" type="Area2D" parent="Radar/Radar/Player" unique_id=31784077]
 

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dqq46qg8t2d2j" path="res://asset/sprites/mainScene_light.png" id="6_0hv2o"]
 [ext_resource type="AudioStream" uid="uid://dp65jqhcgqmqe" path="res://asset/sounds/BGS Thunder.mp3" id="7_xof7f"]
 [ext_resource type="Texture2D" uid="uid://c6ui0f62mm1g8" path="res://asset/sprites/mainScene_button1.png" id="8_w8dp0"]
-[ext_resource type="Script" uid="uid://d21lwlshclm30" path="res://Scripts/Signal1.cs" id="8_wq562"]
+[ext_resource type="Script" uid="uid://d21lwlshclm30" path="res://Scripts/Managers/GameManager/Signal1.cs" id="8_wq562"]
 [ext_resource type="Script" uid="uid://db2ktrjwd0h74" path="res://script/visual/button_press_sprite.gd" id="9_5m8lm"]
 [ext_resource type="Texture2D" uid="uid://cupqhcbfhu1c7" path="res://asset/sprites/mainScene_button1p.png" id="10_ed4ba"]
 [ext_resource type="Texture2D" uid="uid://bs2m4xu02438u" path="res://asset/sprites/mainScene_button2.png" id="11_heju4"]

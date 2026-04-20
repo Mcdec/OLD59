@@ -1,21 +1,20 @@
 using Godot;
 using System;
+using System.ComponentModel;
 
-public partial class RadarCircle : Sprite2D
+public partial class RadarCircle : Node2D
 {
-	
+	[Export] public PackedScene RadarCirclePrefab;
 	public override void _Ready()
 	{
 		
 		AddToGroup("RadarCircle");
-		
 	}
 	void RadarStart()
 	{
-		var tween = CreateTween();
-		
-		tween.TweenProperty(this,"scale", new Vector2(25,25), 10);
-		GD.Print(Scale);
-		tween.TweenProperty(this,"scale", new Vector2(0,0), 0);
+		var radar = RadarCirclePrefab.Instantiate<Sprite2D>();
+		radar.Position = Position;
+		AddChild(radar);
 	}
+	
 }

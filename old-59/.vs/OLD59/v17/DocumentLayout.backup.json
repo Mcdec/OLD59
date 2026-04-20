@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Scripts\\Managers\\GameManager\\RadarCircle.cs",
               "ToolTip": "F:\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\OLD_Plevat\\old-59\\Scripts\\Managers\\GameManager\\RadarCircle.cs",
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\RadarCircle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T11:16:20.73Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\SpawnManager.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAowBcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T10:25:05.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T10:25:05.332Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Scripts\\Ship\\Ship.cs",
               "ViewState": "AgIAABQAAAAAAAAAAADwvyoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T11:02:31.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T11:02:31.793Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Scripts\\Managers\\GameManager\\GameManager.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAIwFsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T10:52:56.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T10:52:56.826Z"
             }
           ]
         }

@@ -27,6 +27,7 @@ scale = Vector2(0.04, 0.042)
 shape = SubResource("CircleShape2D_c6k87")
 
 [node name="visual" parent="." unique_id=594715592 instance=ExtResource("4_x31og")]
+texture_filter = 1
 
 [node name="Label" type="Label" parent="visual" unique_id=993993494]
 layout_mode = 0
@@ -35,5 +36,6 @@ offset_top = 308.99997
 offset_right = 1667.0001
 offset_bottom = 331.99997
 scale = Vector2(4.04568, 3.4092433)
+theme_override_colors/font_color = Color(0.2567771, 0.7915535, 0.44863808, 1)
 text = "0"
 script = ExtResource("3_x31og")

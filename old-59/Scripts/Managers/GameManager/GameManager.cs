@@ -89,7 +89,7 @@ private void _on_timer_timeout(){
 		if (Exists(_command)) {
 			Map.TryGetValue(_command, out float angle);
 			Angle = angle;
-			GetTree().CallGroup("RadarCircle", "RadarStart");
+			GetTree().CallGroup("ship", "RadarStart");
 		}
 			_command = null;
 }
@@ -118,11 +118,12 @@ private void _on_timer_timeout(){
 			
 			_command += i.ToString();
 			if (_command.Length == 1) _timer.Start(1f); 
-			if (_command.Length == 3) 
+			if (_command.Length == 3)
 			{
 			_timer.Stop();
 			if (Exists(_command))
 			{
+				if (_command[0] == '2'){ GetTree().CallGroup("ship", "RadarStart");_command = null;return;}
 				Map.TryGetValue(_command, out float angle);
 				Angle = angle;
 				GetTree().CallGroup("RadarCircle", "RadarStart");

@@ -30,8 +30,7 @@ public partial class DDraw : Sprite2D
 		set
 		{
 			color.A = value;
-			GD.Print(color.A);
-			
+			if (color.A == 0) QueueFree();
 		}
 	}
 	
@@ -44,6 +43,7 @@ public partial class DDraw : Sprite2D
 		tween.Parallel();
 		tween.TweenProperty(this, "Radar_radius", 2048f, 1f);
 		tween.TweenProperty(this, "Color_A", 0f, 0.1f);
+		
 
 	}
 

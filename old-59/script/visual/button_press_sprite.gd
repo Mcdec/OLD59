@@ -22,7 +22,7 @@ func button_down() -> void:
 	visible = false
 	sprite_pushed.visible = true
 	timer.start(0.35)
-	SFX.play_spatial_sound(sp_button,0)
+	SFX.play_spatial_sound(sp_button,0,Vector2(0.2,0.2))
 
 func button_up() -> void:
 	visible = true

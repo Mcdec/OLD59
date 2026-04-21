@@ -5,10 +5,10 @@ class_name SFX
 @export var SFX_IN_EDITOR := false
 
 
-var random_sounds : Dictionary[Timer,AudioStreamPlayer3D]
-@export var random_sounds_names : Dictionary[String,float] = { #file_name, play interval
-	"lighting":20,
-	"foghorn":30
+
+@export var random_sounds_names : Dictionary = { #file_name, play interval, radius, position
+	"lighting":[20,30,Vector2(0,0)],
+	"foghorn":[30,3,Vector2(10,2)]
 }
 
 func _ready() -> void:
@@ -21,10 +21,8 @@ func _ready() -> void:
 #-> Dictionary[Timer,AudioStreamPlayer3D]
 func random_sounds_init() -> void :
 	for sound in random_sounds_names:
-		var stream_player = add_sound_player(sound)
-		var time_interval : float = random_sounds_names.get(sound)
+		print(random_sounds_names,sound)
 		var timer : Timer
-		#Timer init
 		for node in get_children():
 			if node.name == sound.capitalize()+" Timer":
 				timer = node
@@ -34,9 +32,11 @@ func random_sounds_init() -> void :
 			add_child(timer)
 			timer.owner = get_tree().edited_scene_root
 			timer.name = sound.capitalize()+" Timer"
-		timer.stream_player = stream_player
-		timer.time_interval = time_interval
-		timer.start(time_interval)
+		timer.stream_player = add_sound_player(sound)
+		timer.time_interval = random_sounds_names.get(sound).get(0)
+		timer.radius = random_sounds_names.get(sound).get(1)
+		timer.position = random_sounds_names.get(sound).get(2)
+		timer.start(timer.time_interval)
 
 func add_sound_player(file_name:String) -> AudioStreamPlayer3D:
 	##Places AudioStreamPlayer under parent node with a randomized stream by file_name sounds.

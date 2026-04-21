@@ -67,7 +67,7 @@ public partial class GameManager : Node
 		
 		AddChild(_timer);
 		_timer.WaitTime = 1f;
-		_timer.OneShot = false;
+		_timer.OneShot = true;
 		
 		_timer.Connect("timeout", Callable.From(_on_timer_timeout));
 

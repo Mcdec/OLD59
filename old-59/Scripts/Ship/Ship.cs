@@ -7,6 +7,7 @@ public partial class Ship : Node2D
 {
 	Node2D ThisShip;
 	Godot.Timer _timer = new Godot.Timer();
+	[Export] public PackedScene RadarCirclePrefab;
 	[Export] public float Speed = 1f;
 	[Export] public float RotationSpeed = 0.1f;
 	[Export] public float RotationSmooth = 5f;
@@ -31,6 +32,12 @@ public partial class Ship : Node2D
 		_targetRotation = _target.Angle() + 90f;
 		Rotation = _targetRotation;
 		_timer.Start(2f);
+	}
+	void RadarStart()
+	{
+		var radar = RadarCirclePrefab.Instantiate<Sprite2D>();
+		radar.Position = Position;
+		AddChild(radar);
 	}
 	public override void _PhysicsProcess(double delta)
 	{

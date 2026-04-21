@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cyihfwvymtrra"]
 
 [ext_resource type="Script" uid="uid://daatf4sfjtgnq" path="res://Scripts/Ship/Ship.cs" id="1_7nyfi"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_umdaw"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+[ext_resource type="PackedScene" uid="uid://ci4qqxyhk715k" path="res://Prefabs/draw_radar_cercle.tscn" id="2_88h6h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7nyfi"]
 radius = 81.23494
@@ -11,10 +9,8 @@ radius = 81.23494
 [node name="Ship" type="Node2D" unique_id=1601136416]
 scale = Vector2(0.135, 0.14)
 script = ExtResource("1_7nyfi")
+RadarCirclePrefab = ExtResource("2_88h6h")
 Speed = 10.0
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=904292401]
-texture = SubResource("CompressedTexture2D_umdaw")
 
 [node name="Ship" type="Area2D" parent="." unique_id=733747581]
 

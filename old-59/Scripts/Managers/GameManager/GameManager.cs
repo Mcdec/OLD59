@@ -13,7 +13,6 @@ public partial class GameManager : Node
 	
 	
 	private Node2D Player;
-	
 	public float IncomePerSecond = 1f;
 	Godot.Timer _timer = new Godot.Timer();
 	private string _command = null;
@@ -29,6 +28,7 @@ public partial class GameManager : Node
 		}
 		set {
 			points = value;
+			
 
 			GetTree().CallGroup("points", "updatepoints", value);
 		}
@@ -64,10 +64,11 @@ public partial class GameManager : Node
 
 	public override void _Ready()
 	{
+		
 		AddChild(_timer);
 		_timer.WaitTime = 1f;
-		_timer.OneShot = false;
-		//	_timer.Timeout += _on_timer_timeout;
+		_timer.OneShot = true;
+		
 		_timer.Connect("timeout", Callable.From(_on_timer_timeout));
 
 		Player = GetTree().GetFirstNodeInGroup("player") as Node2D;
@@ -88,6 +89,7 @@ private void _on_timer_timeout(){
 		if (Exists(_command)) {
 			Map.TryGetValue(_command, out float angle);
 			Angle = angle;
+			GetTree().CallGroup("ship", "RadarStart");
 		}
 			_command = null;
 }
@@ -116,13 +118,15 @@ private void _on_timer_timeout(){
 			
 			_command += i.ToString();
 			if (_command.Length == 1) _timer.Start(1f); 
-			if (_command.Length == 3) 
+			if (_command.Length == 3)
 			{
 			_timer.Stop();
-			if (Exists(_command)) {
+			if (Exists(_command))
+			{
+				if (_command[0] == '2'){ GetTree().CallGroup("ship", "RadarStart");_command = null;return;}
 				Map.TryGetValue(_command, out float angle);
 				Angle = angle;
-				
+				GetTree().CallGroup("RadarCircle", "RadarStart");
 				_command = null;
 			}
 			

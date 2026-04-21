@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ci4qqxyhk715k"]
+
+[ext_resource type="Script" uid="uid://c7hdxqnp5k0om" path="res://Scripts/Managers/GameManager/DDraw.cs" id="1_h205v"]
+
+[node name="Draw" type="Sprite2D" unique_id=1289422035]
+script = ExtResource("1_h205v")

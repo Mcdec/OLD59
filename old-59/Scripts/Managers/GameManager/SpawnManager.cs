@@ -75,10 +75,7 @@ public partial class SpawnManager : Node
 {
 	var ship = ShipPrefab.Instantiate<Node2D>();
 	ship.GlobalPosition = GetSpawnPosition();
-	
 	AddChild(ship);
-	
-	
 }
 
 }

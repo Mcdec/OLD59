@@ -7,7 +7,7 @@ class_name SFX
 
 var random_sounds : Dictionary[Timer,AudioStreamPlayer3D]
 @export var random_sounds_names : Dictionary[String,float] = { #file_name, play interval
-	"ligthing":20,
+	"lighting":20,
 	"foghorn":30
 }
 
